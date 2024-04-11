@@ -1,0 +1,34 @@
+/*
+   JS-Bonus Assignment
+   
+   Author:  Sarah Badillo
+   Date:    04/10/2024
+   Filename: jsBonus.js
+
+*/
+
+const vowels = ['a', 'e', 'i', 'o', 'u'];
+
+const words = ['dog', 'cat', 'teach', 'world cup', 'down', 'all', 'up', 'over', 'extra'];
+
+
+sortedList = (list) => {
+    let sorted = list.slice().sort();
+    return sorted;
+}
+
+vowelsList = (list) => {
+    let filtered = list.filter(word => vowels.includes(word[0]));
+    return filtered;
+}
+
+noVowelsList = (list) => {
+    let filtered = list.filter(word => !vowels.includes(word[0]));
+    return filtered;
+}
+
+console.log(sortedList(words));// should print ['all', 'cat', 'dog', 'down', 'extra', 'over', 'teach', 'up', 'world cup']
+
+console.log(vowelsList(words));// should print ['all', 'extra', 'over', 'up']
+
+console.log(noVowelsList(words));//should print ['cat' 'dog', 'down', 'teach', 'world cup']
